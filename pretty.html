@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Pretty Print</title>
+
+    <style>
+        body {
+          background-color: rgb(240, 204, 240);
+        }
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<script type="text/javascript">
+function prettyPrint() {//ww w .j av  a  2s  .com
+var ugly = document.getElementById('myTextArea').value;
+var obj = JSON.parse(ugly);
+var pretty = JSON.stringify(obj, undefined, 4);
+document.getElementById('myTextArea').value = pretty;
+}
+
+</script> 
+</head>
+
+<body>
+	<header>
+		
+				
+			<a   href="index.html" type="button"> Home</a>
+		   
+		</header>
+
+
+
+	<h1 style="color:rgb(132, 81, 216);">
+		Indent
+	</h1>
+	
+	<textarea id="myTextArea" cols="100" rows="20"></textarea> 
+      <button onclick="prettyPrint()">Pretty Print</button>  
+</body>
+
+</html>					
